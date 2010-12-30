@@ -1,0 +1,33 @@
+ReadMe for QtUpdater
+
+This project is currently in progress.
+The aim of the library is to update the binary of a QApplication from a Url.
+
+main.cpp exemple:
+------
+#include <QApplication>
+#include "UpdateManager.h"
+
+int main(int argc, char **argv)
+{
+	QCoreApplication app(argc, argv);
+
+	UpdateManager manager;
+	manager.checkUpdate(QUrl("http://update.betterinbox.com/update.php"));
+
+	app.exec();
+}
+------
+
+
+The Url could be for example a php request which return a specific path to a version specify in the request.
+
+A request to this Url should return formatted information as following:
+------
+url: http://example.com/of/your/compress/application/
+md5: 2e8fcd6fc9e4ee6a577d8cc906267fc8
+size: 8313151
+------
+
+
+Currently the new version application should be compress using "QByteArray::qCompress()" of Qt and finish by .biz
