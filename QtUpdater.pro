@@ -12,6 +12,8 @@ CONFIG   -= app_bundle
 
 TEMPLATE = lib
 
+DESTDIR = ../lib
+
 CONFIG += staticlib
 
 SOURCES += \

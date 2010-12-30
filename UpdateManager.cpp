@@ -102,5 +102,5 @@ void UpdateManager::switchExecutables(QString newName)
 	}
 
 	qDebug() << "UpdateManager: good Switch!";
-	QApplication::exit();
+	//QApplication::exit();
 }

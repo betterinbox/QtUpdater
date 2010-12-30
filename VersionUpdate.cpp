@@ -146,7 +146,7 @@ void VersionUpdate::download()
 			qDebug() << "--- " << range;
 			request.setRawHeader("Range", range.toAscii());
 		}
-		QNetworkReply* reply = m_manager.get(request);
+		m_manager.get(request);
 	}
 }
 
